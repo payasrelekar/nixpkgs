@@ -148,6 +148,10 @@ in
 
   addOpenGLRunpath = callPackage ../build-support/add-opengl-runpath { };
 
+  alass = callPackage ../tools/misc/alass {
+    inherit (darwin.apple_sdk.frameworks) Security;
+  };
+
   alda = callPackage ../development/interpreters/alda { };
 
   among-sus = callPackage ../games/among-sus { };
